@@ -20,7 +20,7 @@ spec:
     image: harbor.cloudbrg.com/library/gradle:7.1.1
     volumeMounts:
     - name: dockerconfigjson
-      mountPath: /kaniko/.docker/
+      mountPath: /gradle/.docker/
   - name: kaniko
     command:
     - sleep
