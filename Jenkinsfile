@@ -49,7 +49,7 @@ spec:
         stage('source build') {
             steps {
                 container('gradle') {
-                    sh './gradlew build'                    
+                    sh './gradlew build'
                 }
             }
         }
