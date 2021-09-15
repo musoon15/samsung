@@ -49,6 +49,7 @@ spec:
         stage('source build') {
             steps {
                 container('gradle') {
+                    sh 'chmod +x gradlew'
                     sh './gradlew build'
                 }
             }
