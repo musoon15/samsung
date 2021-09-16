@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        HARBOR_URL = "harbor.clouddari.com"
+        HARBOR_URL = "harbor.cloudbrg.com"
         CI_PROJECT_PATH = "samsung"
         BRANCH = "develop"
         APP_NAME = "samsung"
