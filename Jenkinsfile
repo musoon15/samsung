@@ -2,7 +2,7 @@ pipeline {
     environment {
         HARBOR_URL = "harbor.cloudbrg.com"
         CI_PROJECT_PATH = "samsung"
-        BRANCH = "release"
+        BRANCH = "maven"
         APP_NAME = "samsung"
     }
     agent {
@@ -49,8 +49,8 @@ spec:
         stage('source build') {
             steps {
                 container('gradle') {
-                    sh 'chmod +x gradlew'
-                    sh './gradlew build'
+                    sh 'chmod +x mvnw'
+                    sh './mvnw package'
                 }
             }
         }
