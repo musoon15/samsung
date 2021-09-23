@@ -11,9 +11,9 @@ public class DemoApplication {
 
 	@RequestMapping("/")
 	public String home() {
-	  return "Gradle Project";
+	  return "Maven Project";
 	}
-
+	
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
