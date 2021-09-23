@@ -9,6 +9,10 @@ WORKDIR /app
 # 빌드된 jar 파일 복사
 COPY build/libs/*.jar app.jar
 
+RUN ls -al
+RUN pwd
+RUN ls -l build/libs/
+
 # 노출 시킬 포트번호
 EXPOSE 8080
 
