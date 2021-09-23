@@ -2,7 +2,7 @@ pipeline {
     environment {
         HARBOR_URL = "harbor.itpartime.com"
         CI_PROJECT_PATH = "samsung"
-        BRANCH = "develop"
+        BRANCH = "itpartime"
         APP_NAME = "samsung"
     }
     agent {
