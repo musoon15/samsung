@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        HARBOR_URL = "harbor.cloudbrg.com"
+        HARBOR_URL = "harbor.itpartime.com"
         CI_PROJECT_PATH = "samsung"
         BRANCH = "develop"
         APP_NAME = "samsung"
@@ -17,13 +17,13 @@ spec:
     - sleep
     args:
     - 99d
-    image: harbor.cloudbrg.com/library/gradle:7.1.1
+    image: harbor.itpartime.com/library/gradle:7.1.1
   - name: kaniko
     command:
     - sleep
     args:
     - 99d
-    image: harbor.cloudbrg.com/library/kaniko-project/executor:debug
+    image: harbor.itpartime.com/library/kaniko-project/executor:debug
     volumeMounts:
     - name: dockerconfigjson
       mountPath: /kaniko/.docker/
@@ -32,7 +32,7 @@ spec:
     - sleep
     args:
     - 99d
-    image: harbor.cloudbrg.com/library/alpine/helm:latest
+    image: harbor.itpartime.com/library/alpine/helm:latest
   volumes:  
   - name: dockerconfigjson
     secret:
