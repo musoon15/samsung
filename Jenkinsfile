@@ -50,6 +50,7 @@ spec:
             steps {
                 container('gradle') {
                     sh 'chmod +x gradlew'
+                    sh 'ls -al && pwd'
                     sh './gradlew build'
                 }
             }
