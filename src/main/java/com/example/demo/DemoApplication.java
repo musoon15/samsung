@@ -11,7 +11,7 @@ public class DemoApplication {
 
 	@RequestMapping("/")
 	public String home() {
-	  return "Gradle Project";
+	  return "Gradle Project-1st";
 	}
 
 	public static void main(String[] args) {
