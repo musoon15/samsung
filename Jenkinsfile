@@ -49,15 +49,14 @@ spec:
         stage('source build') {
             steps {
                 container('gradle') {
-                    sh 'chmod +x gradlew'
-                    sh './gradlew build'
+                    sh 'echo "source build"'
                 }
             }
         }
         stage('image build') {
             steps {
                 container('kaniko') {
-                    sh '/kaniko/executor --context ./ --dockerfile ./dockerfile --destination $HARBOR_URL/$CI_PROJECT_PATH/$BRANCH/$APP_NAME:$BUILD_TAG/'
+                    sh '/kaniko/executor --context ./ --dockerfile ./dockerfile --destination $HARBOR_URL/$CI_PROJECT_PATH/$BRANCH/$APP_NAME:$BUILD_TAG'
                 }
             }
         }
